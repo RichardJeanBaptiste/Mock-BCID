@@ -29,8 +29,7 @@ const Body = () => {
   const [ editMode, SetEditMode ] = useState(false);
   const [ colors , SetColors ] = useState(['blue', 'red', 'lightgreen']);
   const [ icon, SetIcon ] = useState('');
-  const [ semester, SetSemester ] = useState('SP 2023');
-  const [ semesterText, SetSemesterText] = useState('');
+  const [ semesterText, SetSemesterText] = useState('SU 2023');
   const [ color1, SetColor1 ] = useState('');
   const [ color2, SetColor2 ] = useState('');
   const [ color3, SetColor3 ] = useState('');
@@ -44,9 +43,6 @@ const Body = () => {
 
 
   const changeColor = (index, val) => {
-    // copy array
-    // change array
-    // change array state
 
     let x = [...colors];
 
@@ -79,10 +75,10 @@ const Body = () => {
                                 ref={semesterRef}
                                 style={styles.textInput}
                                 onChangeText={SetSemesterText}
-                                placeholder={semester}
+                                placeholder={semesterText}
                                 placeholderTextColor="black"
                             />
-                            <Pressable onPress={() => { SetSemester(semesterText);}}>
+                            <Pressable onPress={() => { SetSemesterText(semesterText);}}>
                                 <FontAwesomeIcon style={styles.faCheck} size={22} icon={faCheck}/>
                             </Pressable>
 
